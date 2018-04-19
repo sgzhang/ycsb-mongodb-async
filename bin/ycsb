@@ -185,7 +185,7 @@ def find_jars(dir, glob='*.jar'):
 
 def get_ycsb_home():
     dir = os.path.abspath(os.path.dirname(sys.argv[0]))
-    while "LICENSE.txt" not in os.listdir(dir):
+    while "LICENSE" not in os.listdir(dir):
         dir = os.path.join(dir, os.path.pardir)
     return os.path.abspath(dir)
 

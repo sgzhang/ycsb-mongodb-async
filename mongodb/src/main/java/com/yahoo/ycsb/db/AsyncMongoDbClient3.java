@@ -122,7 +122,7 @@ public class AsyncMongoDbClient3 extends DB{
         if (writeConcern == null) {
           writeConcern = WriteConcern.W1;
         }
-
+        System.out.println("test " + url);
         mongoClient = MongoClients.create(uri);
         database = mongoClient.getDatabase(databaseName)
             .withReadPreference(readPreference)
